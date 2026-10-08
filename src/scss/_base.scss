@@ -1,35 +1,35 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap';
 
 :root {
-  --color-main: #FF5500 !important;
+  --color-main: #F50 !important;
   --color-bg: #0D0D11 !important;
-  --color-txt: #00FF66 !important;
-  --color-bg-alt: #000000 !important;
+  --color-txt: #0F6 !important;
+  --color-bg-alt: #000 !important;
 }
 
 body {
   background-color: #0D0D11 !important;
-  background-image: linear-gradient(rgba(0, 255, 102, 0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0, 255, 102, 0.04) 1px, transparent 1px) !important;
+  background-image: linear-gradient(rgb(0 255 102 / 4%) 1px, transparent 1px),
+                    linear-gradient(90deg, rgb(0 255 102 / 4%) 1px, transparent 1px) !important;
   background-size: 20px 20px !important;
-  color: #00FF66 !important;
+  color: #0F6 !important;
   font-family: 'Share Tech Mono', 'Courier New', monospace !important;
 }
 
 h1, h2, h3, h4, h5, h6, .title {
   font-family: 'Share Tech Mono', monospace !important;
-  color: #FF5500 !important;
-  text-shadow: 2px 2px 0px #000;
+  color: #F50 !important;
+  text-shadow: 2px 2px 0 #000;
 }
 
 a, button, .btn {
-  color: #00FF66 !important;
-  border-color: #00FF66 !important;
+  color: #0F6 !important;
+  border-color: #0F6 !important;
   font-family: 'Share Tech Mono', monospace !important;
 }
 
 .card, .box, section, header, nav {
-  background: rgba(13, 13, 17, 0.9) !important;
-  border: 1px solid #00FF66 !important;
-  box-shadow: 0 0 10px rgba(0, 255, 102, 0.15) !important;
+  background: rgb(13 13 17 / 90%) !important;
+  border: 1px solid #0F6 !important;
+  box-shadow: 0 0 10px rgb(0 255 102 / 15%) !important;
 }

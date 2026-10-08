@@ -26,6 +26,7 @@ main.events {
       grid-template-columns: 1fr;
       max-width: 80%;
     }
+
     /* Two child elements */
     &:has(> :last-child:nth-child(2)) {
       grid-template-columns: 1fr 1fr;
@@ -41,13 +42,12 @@ main.events {
       position: relative;
       text-align: center;
       width: 100%;
-
       transition: transform var(--transition), box-shadow var(--transition);
 
       &:active,
       &:focus,
       &:hover {
-        box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+        box-shadow: 0 0 .5rem rgb(255 255 255 / 30%);
         transform: scale(1.01);
       }
 

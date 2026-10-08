@@ -1,222 +1,84 @@
 {
-  "name": "Velocidad Absurda",
+  "name": "VELOCIDAD ABSURDA",
   "bio": {
-    "es": "<p><b>[HISTORIA DE RESISTENCIA]</b> Nacimos en plena pandemia (2020), encerrados por las restricciones del maldito cierre perimetral en San Vicente del Raspeig (Alicante). Al no poder salir del pueblo, los miembros originales de otras bandas —Trintxe, Tinito y Jorge \"el negro\"— decidieron reventar el silencio juntándose en el local de ensayo de \"el Negro\". En diciembre del mismo año sumamos la voz principal de Maikel, consolidando una puta familia con ganas de escupir temas propios basados en vivencias crudas, hechos pasados y realidades de mierda de este mundo.</p><p><b>[MUTACIÓN Y PERSISTENCIA]</b> El fango del directo desgasta: a principios de 2022 Trintxe tuvo que dejar las cuerdas, abriendo paso a la llegada de Alfon para meter metralla a la guitarra y coros. A finales de ese año, Tinito soltó las baquetas y Dani se unió al instante al frente rítmico. Toco reinventar ritmos, ideas y estructuras desde cero, pero a base de constancia, dedicación y compañerismo cayeron los conciertos y parimos vuestro primer disco. Velocidad Absurda ha venido para quedarse.</p>",
-    "en": "<p>Punk-rock from Alicante, born in 2020 during the lockdown. Raw energy, DIY philosophy, and analog pure sound.</p>",
-    "fr": "<p>Punk-rock d'Alicante, né en 2020 pendant le confinement. Énergie brute et son analogique pur.</p>",
-    "de": "<p>Punk-Rock aus Alicante, gegründet 2020 während des Lockdowns. Rohe Energie und analoger Sound.</p>"
+    "es": "Punk-Rock de la Terreta (San Vicente del Raspeig · Alicante). Nacidos en pandemia (2020) para reventar el silencio con ruido real, hardware analógico y soberanía tecnológica."
   },
   "bandPicture": "foto1.jpg",
+  "styles": {
+    "mainColor": "#00ff66",
+    "gradientStart": "#0d0d11",
+    "gradientEnd": "#000000"
+  },
+  "releases": [
+    {
+      "title": "Tranquilo Hermano...",
+      "artist": "Velocidad Absurda",
+      "date": "2023-05-15",
+      "cover": "foto8.jpg",
+      "duration": "46:30",
+      "audio": "demo.mp3",
+      "label": "Autogestionado",
+      "labelLink": "https://sonidoabsurdo.es",
+      "showOnMainPage": true,
+      "links": [
+        { "type": "spotify", "url": "https://spotify.com" },
+        { "type": "youtube", "url": "https://youtube.com" }
+      ],
+      "tracks": [
+        { "title": "Droga y Deporte", "duration": "03:12", "composer": "Velocidad Absurda", "author": "Maikel" },
+        { "title": "Cayetano", "duration": "02:45", "composer": "Velocidad Absurda", "author": "Maikel" },
+        { "title": "Trankilx Hermano", "duration": "03:30", "composer": "Velocidad Absurda", "author": "Maikel" }
+      ]
+    }
+  ],
   "members": [
     {
       "fullName": "Maikel",
       "picture": "fotomaikel1.jpg",
       "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Voz Principal. Al frente de las líneas vocales del grupo desde diciembre de 2020, escupiendo letras crudas y directas.</p>",
-        "en": "<p>Lead Vocals</p>",
-        "fr": "<p>Chant lead</p>",
-        "de": "<p>Gesang</p>"
-      },
-      "roles": ["leadvocals"],
-      "range": "2020-"
+      "roles": [0],
+      "range": "2020-2026",
+      "bio": { "es": "Voz Principal. Escupiendo letras crudas e incisivas desde los inicios de la banda." }
     },
     {
-      "fullName": "Jorge \"El Negro\"",
+      "fullName": "Jorge 'El Negro'",
       "picture": "fotonegro1.jpg",
       "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Bajo y Voz. Custodio del local de ensayo original donde empezó todo el proyecto en San Vicente del Raspeig.</p>",
-        "en": "<p>Bass and Vocals</p>",
-        "fr": "<p>Basse et chant</p>",
-        "de": "<p>Bass und Gesang</p>"
-      },
-      "roles": ["bass", "backingvocals"],
-      "range": "2020-"
+      "roles": [1],
+      "range": "2020-2026",
+      "bio": { "es": "Bajo y Voz. Fundador y pilar del frente rítmico." }
     },
     {
       "fullName": "Alfon",
       "picture": "fotoalfon1.jpg",
       "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Guitarra y Coros. Incorporado a principios de 2022 para meter metralla en las cuerdas y blindar la base armónica.</p>",
-        "en": "<p>Guitar and Backing Vocals</p>",
-        "fr": "<p>Guitare et chœurs</p>",
-        "de": "<p>Gitarre und Gesang</p>"
-      },
-      "roles": ["guitar", "backingvocals"],
-      "range": "2022-"
+      "roles": [2],
+      "range": "2022-2026",
+      "bio": { "es": "Guitarra y Coros. Metralla de cuerdas incorporada en 2022." }
     },
     {
       "fullName": "Dani",
       "picture": "fotodani1.jpg",
       "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Batería. Tomó las baquetas a finales de 2022 para sostener el frente rítmico con precisión y contundencia.</p>",
-        "en": "<p>Drums</p>",
-        "fr": "<p>Batterie</p>",
-        "de": "<p>Schlagzeug</p>"
-      },
-      "roles": ["drums"],
-      "range": "2022-"
+      "roles": [3],
+      "range": "2022-2026",
+      "bio": { "es": "Batería. Potencia rítmica en el frente desde finales de 2022." }
     }
   ],
-  "pastMembers": [
-    {
-      "fullName": "Trintxe",
-      "picture": "foto2.jpg",
-      "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Miembro fundador a la guitarra en 2020, activo hasta principios de 2022.</p>",
-        "en": "<p>Founding member, guitar (2020-2022).</p>",
-        "fr": "<p>Membre fondateur, guitare (2020-2022).</p>",
-        "de": "<p>Gründungsmitglied, Gitarre (2020-2022).</p>"
-      },
-      "roles": ["guitar"],
-      "range": "2020-2022"
-    },
-    {
-      "fullName": "Tinito",
-      "picture": "foto3.jpg",
-      "pictureCredit": "Velocidad Absurda",
-      "bio": {
-        "es": "<p>Batería fundador en 2020, activo hasta finales de 2022.</p>",
-        "en": "<p>Founding member, drums (2020-2022).</p>",
-        "fr": "<p>Membre fondateur, batterie (2020-2022).</p>",
-        "de": "<p>Gründungsmitglied, Schlagzeug (2020-2022).</p>"
-      },
-      "roles": ["drums"],
-      "range": "2020-2022"
-    }
-  ],
+  "pastMembers": [],
   "events": [
     {
-      "title": "Fiestorro Cierre de Temporada (Spidikflotes + Puto Donal + Velocidad Absurda + Kontragolpes)",
-      "picture": "cartel1.jpg",
+      "title": "Fiestorro Cierre de Temporada",
       "date": "2026-06-27",
-      "place": "Sala Marearock (Babel Live Music), Calle del Comercio, 10 - Alicante",
+      "place": "Sala Marearock (Alicante)",
+      "picture": "27.2.24 080.jpg",
       "url": "https://sonidoabsurdo.es",
-      "description": {
-        "es": "<p>Asalto en directo de cierre de temporada. De 22:00 a 06:00 h. Entradas directas desde 10€.</p>",
-        "en": "<p>Live show at Sala Marearock, Alicante.</p>",
-        "fr": "<p>Concert live à Sala Marearock, Alicante.</p>",
-        "de": "<p>Live-Konzert in der Sala Marearock, Alicante.</p>"
-      }
+      "description": { "es": "SPIDIKFLOTES + PUTO DONAL + VELOCIDAD ABSURDA + KONTRAGOLPES" }
     }
   ],
-  "releases": [
-    {
-      "title": "Tranquilo Hermano...",
-      "artist": "Velocidad Absurda",
-      "cover": "Portadavinilo.jpg",
-      "audio": "tranquilo_extract.mp3",
-      "date": "2023-01-01",
-      "duration": "35:00",
-      "label": "Autogestionado",
-      "labelLink": "https://sonidoabsurdo.es/",
-      "showOnMainPage": true,
-      "links": [
-        {
-          "type": "spotify",
-          "url": ""
-        },
-        {
-          "type": "bandcamp",
-          "url": ""
-        },
-        {
-          "type": "youtube",
-          "url": ""
-        }
-      ],
-      "moreLinks": [
-        {
-          "type": "discogs",
-          "url": ""
-        }
-      ],
-      "tracks": [
-        {
-          "title": "Droga y Deporte",
-          "duration": "3:00",
-          "composer": "Velocidad Absurda",
-          "author": "Velocidad Absurda"
-        },
-        {
-          "title": "Cayetano",
-          "duration": "2:45",
-          "composer": "Velocidad Absurda",
-          "author": "Velocidad Absurda"
-        },
-        {
-          "title": "Trankilx Hermano",
-          "duration": "3:10",
-          "composer": "Velocidad Absurda",
-          "author": "Velocidad Absurda"
-        }
-      ]
-    },
-    {
-      "title": "Vinilo Split 12\" (Velocidad Absurda / Los Liposonas)",
-      "artist": "Velocidad Absurda & Los Liposonas",
-      "cover": "Portadavinilo.jpg",
-      "audio": "",
-      "date": "2025-01-01",
-      "duration": "20:00",
-      "label": "Kamilosetas / Working Class Records",
-      "labelLink": "",
-      "showOnMainPage": true,
-      "links": [],
-      "moreLinks": [],
-      "tracks": [
-        {
-          "title": "Cara B: Versiones Remasterizadas (Droga y Deporte, Cayetano, Trankilx Hermano)",
-          "duration": "10:00",
-          "composer": "Velocidad Absurda",
-          "author": "Velocidad Absurda"
-        }
-      ]
-    }
-  ],
-  "medias": [
-    {
-      "type": "image",
-      "link": "assets/img/artists/foto1.jpg"
-    },
-    {
-      "type": "image",
-      "link": "assets/img/artists/foto5.jpg"
-    },
-    {
-      "type": "image",
-      "link": "assets/img/artists/foto6.jpg"
-    }
-  ],
+  "medias": [],
   "links": [
-    {
-      "type": "instagram",
-      "name": "Instagram",
-      "url": "https://instagram.com"
-    },
-    {
-      "type": "facebook",
-      "name": "Facebook",
-      "url": "https://facebook.com"
-    },
-    {
-      "type": "spotify",
-      "name": "Spotify",
-      "url": "https://spotify.com"
-    },
-    {
-      "type": "bandcamp",
-      "name": "Bandcamp",
-      "url": "https://bandcamp.com"
-    }
-  ],
-  "styles": {
-    "mainColor": "#FF5500",
-    "gradientStart": "#0D0D11",
-    "gradientEnd": "#000000"
-  }
+    { "name": "Instagram", "type": "instagram", "url": "https://instagram.com" },
+    { "name": "Facebook", "type": "facebook", "url": "https://facebook.com" }
+  ]
 }

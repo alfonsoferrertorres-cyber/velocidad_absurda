@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   select {
     top: var(--spacing-small);
   }
@@ -25,7 +25,7 @@
             margin: 0 1rem;
           }
 
-          P {
+          p {
             font-size: 1.2rem;
             margin-right: 1rem;
           }
@@ -35,7 +35,7 @@
   }
 }
 
-@media (max-width: 870px) {
+@media (width <= 870px) {
   section.track-playback {
     .featured-track-wrapper {
       .featured-track-container {
@@ -71,7 +71,7 @@
   }
 }
 
-@media (max-width: 512px) {
+@media (width <= 512px) {
   .home {
     left: var(--spacing-small);
     top: var(--spacing-small);
@@ -185,7 +185,7 @@
   }
 }
 
-@media (max-height: 740px) {
+@media (height <= 740px) {
   /* Typically for screen with zoom factor */
   main.home {
     display: inherit;
@@ -212,7 +212,7 @@
   }
 }
 
-@media (max-height: 630px) {
+@media (height <= 630px) {
   section.track-links {
     h1 {
       font-size: 1.9rem;
@@ -242,7 +242,7 @@
   }
 }
 
-@media (max-height: 512px) {
+@media (height <= 512px) {
   main.home img {
     margin: 2% 0;
     max-width: 25rem;

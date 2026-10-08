@@ -77,11 +77,13 @@ main.homepage {
     padding: 0 8%;
     padding-right: calc(8% + var(--default-scroll-size));
     width: 100%;
+
     /* Only one child element */
     &:has(> :last-child:nth-child(1)) {
       grid-template-columns: 1fr;
       max-width: 50%;
     }
+
     /* Two child elements */
     &:has(> :last-child:nth-child(2)) {
       grid-template-columns: 1fr 1fr;
@@ -93,13 +95,12 @@ main.homepage {
       display: flex;
       cursor: pointer;
       position: relative;
-
       transition: transform var(--transition), box-shadow var(--transition);
 
       &:active,
       &:focus,
       &:hover {
-        box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+        box-shadow: 0 0 .5rem rgb(255 255 255 / 30%);
         transform: scale(1.01);
       }
 
@@ -155,7 +156,6 @@ main.homepage {
       position: absolute;
       text-align: center;
       width: 100%;
-
       transition: opacity var(--transition);
 
       &:active,

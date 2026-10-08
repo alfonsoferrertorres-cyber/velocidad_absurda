@@ -103,6 +103,7 @@ section.track-playback {
             filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(3753%) hue-rotate(22deg) brightness(94%) contrast(88%);
           }
         }
+
         @media (prefers-color-scheme: dark) {
           img {
             filter: brightness(0) saturate(100%) invert(100%) sepia(43%) saturate(22%) hue-rotate(272deg) brightness(111%) contrast(92%);
@@ -165,7 +166,6 @@ section.track-playback {
         position: absolute;
         top: 0;
         width: 110%;
-
         transition: opacity var(--transition);
 
         h3 {
@@ -278,7 +278,6 @@ section.track-links {
       text-decoration: none;
       text-align: center;
       user-select: none;
-
       transition: all var(--transition);
 
       @media (prefers-color-scheme: dark) {
