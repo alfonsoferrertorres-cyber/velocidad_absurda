@@ -3,85 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VELOCIDAD ABSURDA | Punk Rock desde San Vicente del Raspeig (Alicante)</title>
+  <title>VELOCIDAD ABSURDA | Punk Rock</title>
 
   <!-- FAVICONS -->
-  <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- ESTILOS LOCALES COMPILADOS -->
+  <!-- ESTILOS LOCALES -->
   <link rel="stylesheet" href="styles.css">
 
   <style>
     body { background-color: #0d0d11; color: #d0d0d0; font-family: monospace; margin: 0; padding: 0; }
-    .terminal-container { max-width: 900px; margin: 0 auto; padding: 1rem; }
-    .cyber-box { border: 1px solid #00ff66; background: rgba(13, 13, 17, 0.95); margin-bottom: 1.5rem; padding: 1.2rem; }
+    .terminal-container { max-width: 950px; margin: 0 auto; padding: 1rem; }
+    
+    .cyber-box { 
+      border: 1px solid #00ff66; 
+      background: rgba(13, 13, 17, 0.95); 
+      margin-bottom: 1.5rem; 
+      padding: 1.2rem; 
+      position: relative;
+    }
     .cyber-box.highlight { border-color: #ff5500; }
     
-    h1, h2, h3 { font-family: monospace; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; }
-    h2 { color: #00ff66; border-bottom: 1px dashed #333; padding-bottom: 0.5rem; }
+    /* TELEMETRÍA SUPERIOR */
+    .telemetry-bar {
+      background: #000; border: 1px solid #00ff66; padding: 10px 15px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.9rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 10px;
+    }
+
+    /* CABECERA CON FONDO FOTO9.JPG Y LOGOS */
+    .hero-header {
+      position: relative;
+      border: 1px solid #ff5500;
+      padding: 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url('foto9.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.25) opacity(0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
     
-    .btn-cyber { display: inline-block; padding: 0.6rem 1.2rem; border: 1px solid #00ff66; color: #00ff66; text-decoration: none; margin: 0.3rem 0.2rem; font-weight: bold; background: #000; transition: all 0.2s; }
+    .logo-header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .logo-colab {
+      height: 45px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+    }
+    .logo-main-band {
+      height: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 8px #ff5500);
+    }
+
+    /* BOTONES SIMÉTRICOS EN UNA SOLA FILA */
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+    }
+    .btn-cyber-nav {
+      flex: 1;
+      text-align: center;
+      padding: 0.7rem 0.2rem;
+      border: 1px solid #00ff66;
+      color: #00ff66;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.8rem;
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 6px rgba(0, 255, 102, 0.2);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-cyber-nav:hover {
+      background: #00ff66;
+      color: #000;
+      box-shadow: 0 0 12px #00ff66;
+    }
+
+    .btn-cyber { display: inline-block; padding: 0.6rem 1.2rem; border: 1px solid #00ff66; color: #00ff66; text-decoration: none; font-weight: bold; background: #000; transition: all 0.2s; }
     .btn-cyber:hover { background: #00ff66; color: #000; }
     .btn-cyber.alert { border-color: #ff5500; color: #ff5500; }
     .btn-cyber.alert:hover { background: #ff5500; color: #000; }
-    
-    .hero-buttons .btn-cyber { font-size: 0.9rem; padding: 0.6rem 1rem; }
-    
+
     .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
     .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
-    
     .card { border: 1px solid #333; padding: 1rem; background: #000; text-align: center; }
     .card img { width: 100%; height: 160px; object-fit: cover; border: 1px solid #00ff66; }
-    
-    .timeline { list-style: none; padding-left: 0; border-left: 2px solid #ff5500; margin-left: 0.5rem; }
-    .timeline li { margin-bottom: 1rem; padding-left: 1rem; position: relative; }
-    .timeline li::before { content: "■"; color: #ff5500; position: absolute; left: -0.4rem; top: 0; }
-    
-    .telemetry-bar {
-      background: #000; border: 1px solid #00ff66; padding: 8px 15px;
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.8rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 10px;
-    }
   </style>
 </head>
 <body class="cyber-terminal">
 
   <main class="terminal-container">
 
-    <!-- BARRA DE TELEMETRÍA -->
+    <!-- RELOJ Y TELEMETRÍA -->
     <div class="telemetry-bar">
-      <div>SYS: VELOCIDAD_ABSURDA_CORE</div>
-      <div>HORA_SISTEMA: <span id="live-clock" style="color:#ff5500;">00:00:00</span></div>
-      <div style="color:#00ff66;">● EMISIÓN_ACTIVA</div>
+      <div><span style="color: #00f3ff; font-weight: bold; font-size: 1rem;">Velocidad Absurda</span></div>
+      <div style="color: #e7fe00; font-weight: bold; font-size: 1rem;" id="live-clock">18:00:00</div>
+      <div><span style="color: #ff3333; font-weight: bold;">🔴 Banda Activa</span></div>
     </div>
 
-    <!-- CABECERA PRINCIPAL -->
-    <header class="cyber-box" style="text-align: center; border-color: #ff5500;">
-      <div style="color: #00ff66; font-size: 0.85rem;">
-        <span>● EN ACTIVO</span> | <span>SAN VICENTE DEL RASPEIG · ALICANTE</span>
-      </div>
-      
-      <h1 style="color: #ff5500; font-size: 2.5rem; margin: 0.8rem 0 0.2rem 0;">VELOCIDAD ABSURDA</h1>
-      <p style="color: #00ff66; font-size: 1rem; margin: 0;">PUNK ROCK DESDE LA TERRETA · SIN PEDIR PERMISO</p>
-      <p style="color: #888; font-size: 0.8rem; margin-top: 0.4rem;">RUIDO. RABIA. CERVEZAS. REALIDAD. (2020 — ∞)</p>
-      
-      <div class="hero-buttons" style="margin-top: 1.2rem;">
-        <a href="#conciertos" class="btn-cyber alert">01 / CONCIERTOS</a>
-        <a href="#historia" class="btn-cyber">02 / HISTORIA</a>
-        <a href="#redes" class="btn-cyber">03 / REDES / META</a>
-        <a href="#musica" class="btn-cyber">04 / MÚSICA</a>
-        <a href="#banda" class="btn-cyber">05 / BANDA</a>
-        <a href="#contacto" class="btn-cyber">06 / BOOKING</a>
+    <!-- CABECERA PRINCIPAL CON FONDO FOTO9.JPG Y LOGOS -->
+    <header class="hero-header">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="logo-header-container">
+          <img src="working_class_records_logo.jpg" alt="Working Class Records" class="logo-colab" onerror="this.src='working_class_records_logo.png'">
+          <img src="favicon.png" alt="Velocidad Absurda" class="logo-main-band" onerror="this.src='favicon.ico'">
+          <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" class="logo-colab" onerror="this.src='kamilosetas_muskaria_logo.jpg'">
+        </div>
+        
+        <div class="nav-row">
+          <a href="#conciertos" class="btn-cyber-nav">01/CONCIERTOS</a>
+          <a href="#historia" class="btn-cyber-nav">02/HISTORIA</a>
+          <a href="#redes" class="btn-cyber-nav">03/REDES</a>
+          <a href="#musica" class="btn-cyber-nav">04/MÚSICA</a>
+          <a href="#banda" class="btn-cyber-nav">05/BANDA</a>
+          <a href="#contacto" class="btn-cyber-nav">06/BOOKING</a>
+        </div>
       </div>
     </header>
 
-    <!-- 01 / SECCIÓN CONCIERTOS -->
+    <!-- 01 / CONCIERTOS -->
     <section id="conciertos" class="cyber-box highlight">
-      <h2 id="concierto-header-title" style="color: #ff5500;">[01 / CONCIERTOS]</h2>
-      
+      <h2 style="color: #ff5500;">[01 / CONCIERTOS]</h2>
       <div id="concierto-container" style="text-align: center;">
-        <img id="cartel-dinamico" src="/assets/img/27.2.24 080.jpg" alt="Cartel Concierto" style="max-width: 100%; height: auto; max-height: 380px; border: 1px solid #ff5500; margin-bottom: 1rem;">
+        <img id="cartel-dinamico" src="/assets/img/27.2.24 080.jpg" alt="Cartel Concierto" style="max-width: 100%; height: auto; max-height: 380px; border: 1px solid #ff5500; margin-bottom: 1rem;" onerror="this.src='cartel1.jpg'">
         <h3 id="titulo-dinamico" style="color: #ff5500; font-size: 1.4rem; margin: 0.5rem 0;">FIESTORRO CIERRE DE TEMPORADA</h3>
         <p id="lineup-dinamico" style="color: #00ff66; font-size: 0.95rem; font-weight: bold;">SPIDIKFLOTES + PUTO DONAL + VELOCIDAD ABSURDA + KONTRAGOLPES</p>
         <p id="fecha-dinamica" style="color:#d0d0d0;">📅 Sábado, 27 de Junio de 2026</p>
@@ -96,21 +164,26 @@
     <section id="historia" class="cyber-box">
       <h2>02 / HISTORIA DE RESISTENCIA</h2>
       <p style="font-size: 0.9rem; line-height: 1.5; color: #ccc;">
-        <strong style="color:#00ff66;">[NACIMIENTO]</strong> Nacimos en plena pandemia (2020), encerrados por las restricciones del maldito cierre perimetral en San Vicente del Raspeig (Alicante)[cite: 12, 13]. Al no poder salir del pueblo, los miembros originales de otras bandas —Trintxe, Tinito y Jorge "el negro"— decidieron reventar el silencio juntándose en el local de ensayo de "el Negro"[cite: 12, 13]. En diciembre del mismo año sumamos la voz principal de Maikel, consolidando una puta familia con ganas de escupir temas propios basados en vivencias crudas, hechos pasados y realidades de mierda de este mundo[cite: 12, 13].
+        <strong style="color:#00ff66;">[NACIMIENTO]</strong> Nacimos en plena pandemia (2020), encerrados por las restricciones del maldito cierre perimetral en San Vicente del Raspeig (Alicante). Al no poder salir del pueblo, los miembros originales de otras bandas —Trintxe, Tinito y Jorge "el negro"— decidieron reventar el silencio juntándose en el local de ensayo de "el Negro". En diciembre del mismo año sumamos la voz principal de Maikel, consolidando una puta familia con ganas de escupir temas propios basados en vivencias crudas, hechos pasados y realidades de mierda de este mundo.
       </p>
       <p style="font-size: 0.9rem; line-height: 1.5; color: #ccc;">
-        <strong style="color:#00ff66;">[MUTACIÓN Y PERSISTENCIA]</strong> El fango del directo desgasta: a principios de 2022 Trintxe tuvo que dejar las cuerdas, abriendo paso a la llegada de Alfon para meter metralla a la guitarra y coros[cite: 12, 13]. A finales de ese año, Tinito soltó las baquetas y Dani se unió al instante al frente rítmico[cite: 12, 13]. Tocó reinventar ritmos, ideas y structures desde cero, pero a base de constancia, dedicación y compañerismo cayeron los conciertos y parimos vuestro primer disco[cite: 12, 13]. Velocidad Absurda ha venido para quedarse[cite: 12, 13].
+        <strong style="color:#00ff66;">[MUTACIÓN Y PERSISTENCIA]</strong> El fango del directo desgasta: a principios de 2022 Trintxe tuvo que dejar las cuerdas, abriendo paso a la llegada de Alfon para meter metralla a la guitarra y coros. A finales de ese año, Tinito soltó las baquetas y Dani se unió al instante al frente rítmico. Tocó reinventar ritmos, ideas y estructuras desde cero, pero a base de constancia, dedicación y compañerismo cayeron los conciertos y parimos vuestro primer disco. Velocidad Absurda ha venido para quedarse.
       </p>
     </section>
 
-    <!-- 03 / PASARELA DE REDES Y META -->
+    <!-- 03 / PASARELA DE REDES Y EMBED AUTOMATIZADO -->
     <section id="redes" class="cyber-box">
       <h2>03 / CONEXIÓN DIGITAL · META & INSTAGRAM</h2>
-      <p style="font-size: 0.85rem;">Canal directo con las publicaciones en tiempo real del grupo.</p>
+      <p style="font-size: 0.85rem; color: #aaa; text-align: center;">Última publicación automatizada desde nuestro canal oficial:</p>
       
-      <div style="text-align: center; margin: 1.5rem 0;">
+      <!-- CUADRO AUTOMATIZADO DE EMBED DE INSTAGRAM -->
+      <div style="display: flex; justify-content: center; margin: 15px 0;">
+        <iframe src="https://www.instagram.com/p/DFoX3g3I6G_/embed/captioned/" width="100%" height="480" frameborder="0" scrolling="no" allowtransparency="true" style="max-width: 480px; border: 1px solid #00f3ff; background: #000;"></iframe>
+      </div>
+
+      <div style="text-align: center; margin-top: 1rem;">
         <a href="https://instagram.com/velocidadabsurda" target="_blank" class="btn-cyber alert" style="background:#e1306c; color:#fff; border-color:#e1306c; margin-right: 10px;">
-          📸 INSTAGRAM OFICIAL (@velocidadabsurda)
+          📸 INSTAGRAM OFICIAL
         </a>
         <a href="https://facebook.com/velocidadabsurda" target="_blank" class="btn-cyber" style="background:#1877f2; color:#fff; border-color:#1877f2;">
           👥 FACEBOOK BANDA
@@ -118,19 +191,19 @@
       </div>
     </section>
 
-    <!-- 04 / DISCOGRAFÍA -->
+    <!-- 04 / MÚSICA Y LANZAMIENTOS -->
     <section id="musica" class="cyber-box">
       <h2>04 / MÚSICA Y LANZAMIENTOS</h2>
       <div class="grid-2">
         <div class="card">
-          <img src="/assets/img/foto8.jpg" alt="Álbum Tranquilo Hermano">
+          <img src="/assets/img/foto8.jpg" alt="Álbum Tranquilo Hermano" onerror="this.src='foto8.jpg'">
           <h3 style="color: #ff5500; margin-top: 0.5rem; font-size: 1rem;">ÁLBUM: TRANQUILO HERMANO... (2023)</h3>
           <p style="font-size: 0.8rem; color:#aaa;">35 minutos de metralla pura. 100% Autogestionado.</p>
           <a href="https://open.spotify.com/intl-es/artist/1tQApq8Z7Maz9Gls5VSqtD" target="_blank" class="btn-cyber">ESCUCHAR EN SPOTIFY</a>
         </div>
 
         <div class="card">
-          <img src="/assets/img/foto8.jpg" alt="Vinilo Split 12">
+          <img src="/assets/img/foto8.jpg" alt="Vinilo Split 12" onerror="this.src='foto8.jpg'">
           <h3 style="color: #ff5500; margin-top: 0.5rem; font-size: 1rem;">VINILO SPLIT 12" (2025)</h3>
           <p style="font-size: 0.8rem; color:#aaa;">VELOCIDAD ABSURDA / LOS LIPOSOMAS</p>
           <p style="color: #ff5500; font-weight: bold;">15,00 €</p>
@@ -139,24 +212,24 @@
       </div>
     </section>
 
-    <!-- 05 / INTEGRANTES -->
+    <!-- 05 / LA BANDA -->
     <section id="banda" class="cyber-box">
       <h2>05 / LA BANDA</h2>
       <div class="grid-4">
         <div class="card">
-          <img src="/assets/img/fotomaikel1.jpg" alt="Maikel">
+          <img src="/assets/img/fotomaikel1.jpg" alt="Maikel" onerror="this.src='fotomaikel1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">MAIKEL<br><small style="color:#aaa;">Voz Principal</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotonegro1.jpg" alt="Jorge El Negro">
+          <img src="/assets/img/fotonegro1.jpg" alt="Jorge El Negro" onerror="this.src='fotonegro1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">JORGE "NEGRO"<br><small style="color:#aaa;">Bajo & Voces</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotoalfon1.jpg" alt="Alfon">
+          <img src="/assets/img/fotoalfon1.jpg" alt="Alfon" onerror="this.src='fotoalfon1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">ALFON<br><small style="color:#aaa;">Guitarra & Coros</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotodani1.jpg" alt="Dani">
+          <img src="/assets/img/fotodani1.jpg" alt="Dani" onerror="this.src='fotodani1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">DANI<br><small style="color:#aaa;">Batería</small></div>
         </div>
       </div>
@@ -173,12 +246,18 @@
 
   </main>
 
-  <footer style="text-align: center; padding: 1.5rem; color: #555; font-size: 0.75rem;">
-    © 2026 VELOCIDAD ABSURDA · SAN VICENTE DEL RASPEIG (ALICANTE)
+  <!-- PIE DE PÁGINA CON LOGOS DE COLABORACIÓN Y BANDA -->
+  <footer style="text-align: center; padding: 2rem 1rem; color: #666; font-size: 0.8rem; border-top: 1px solid #333; margin-top: 2rem;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-bottom: 1rem;">
+      <img src="working_class_records_logo.jpg" alt="Working Class Records" style="height: 35px; object-fit: contain;" onerror="this.src='working_class_records_logo.png'">
+      <img src="favicon.png" alt="Velocidad Absurda" style="height: 55px; object-fit: contain;" onerror="this.src='favicon.ico'">
+      <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" style="height: 35px; object-fit: contain;" onerror="this.src='kamilosetas_muskaria_logo.jpg'">
+    </div>
+    <p>© 2026 VELOCIDAD ABSURDA · SAN VICENTE DEL RASPEIG (ALICANTE)</p>
   </footer>
 
   <script>
-    // RELOJ EN TIEMPO REAL
+    // RELOJ SOLO HORA REAL
     function updateClock() {
       const now = new Date();
       document.getElementById("live-clock").innerText = now.toLocaleTimeString("es-ES");
@@ -186,7 +265,7 @@
     setInterval(updateClock, 1000);
     updateClock();
 
-    // LÓGICA DE EVENTOS DESDE EVENTS.JSON
+    // DATO DINÁMICO DESDE EVENTS.JSON
     fetch("events.json")
       .then(res => res.json())
       .then(data => {
