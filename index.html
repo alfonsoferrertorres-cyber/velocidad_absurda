@@ -23,6 +23,17 @@
     }
     .telemetry-time { color: #e7fe00; font-weight: bold; }
     .telemetry-status { color: #00ff66; }
+    .insta-embed-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: #000;
+      border: 1px solid #333;
+      border-radius: 4px;
+      margin: 15px auto;
+      max-width: 540px;
+    }
   </style>
 </head>
 <body class="punk-industrial-theme">
@@ -56,17 +67,17 @@
       <h1 class="glitch-title">VELOCIDAD ABSURDA</h1>
       <h2 class="subtitle-neon">PUNK-ROCK DE LA TERRETA (ALICANTE). RUIDO REAL.</h2>
 
-      <!-- PASARELA META / INSTAGRAM -->
+      <!-- PASARELA META / INSTAGRAM VISIBLE -->
       <div class="terminal-box" style="border-color: #00f3ff; text-align: center; margin-bottom: 30px;">
-        <h3 style="color: #00f3ff; margin-bottom: 15px;">[PASARELA AUTOMÁTICA - ÚLTIMAS EMISIONES META / INSTAGRAM]</h3>
-        <p style="color: #aaa; font-size: 0.95rem; margin-bottom: 20px;">Accede directamente a la trinchera digital para enterarte de nuestras últimas publicaciones, comunicados y tralla en tiempo real.</p>
+        <h3 style="color: #00f3ff; margin-bottom: 15px;">[PASARELA AUTOMÁTICA - ÚLTIMA EMISIÓN META / INSTAGRAM]</h3>
+        
+        <div class="insta-embed-wrapper">
+          <iframe src="https://www.instagram.com/p/DFoX3g3I6G_ /embed/captioned/" width="100%" height="560" frameborder="0" scrolling="no" allowtransparency="true" style="border:none; max-width:500px;"></iframe>
+        </div>
 
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-          <a href="https://instagram.com/velocidadabsurda" class="btn-massive-click" style="background: #e1306c !important; box-shadow: 0 4px 0 #b11b4c !important; display: inline-block; width: auto; padding: 12px 25px;" target="_blank">
-            📸 ÚLTIMAS PUBLICACIONES EN INSTAGRAM
-          </a>
-          <a href="https://facebook.com/velocidadabsurda" class="btn-massive-click" style="background: #1877f2 !important; box-shadow: 0 4px 0 #0d5cb8 !important; display: inline-block; width: auto; padding: 12px 25px;" target="_blank">
-            👥 COMUNICADOS EN FACEBOOK
+        <div style="margin-top: 15px;">
+          <a href="https://instagram.com/velocidadabsurda" class="btn-massive-click" style="background: #e1306c !important; box-shadow: 0 4px 0 #b11b4c !important; display: inline-block; width: auto; padding: 10px 25px;" target="_blank">
+            📸 VER PERFIL COMPLETO EN INSTAGRAM
           </a>
         </div>
       </div>
@@ -74,10 +85,10 @@
       <!-- HISTORIA DE RESISTENCIA -->
       <div class="terminal-box">
         <p class="terminal-text">
-          <strong>[HISTORIA DE RESISTENCIA]</strong> Nacimos en plena pandemia (2020), encerrados por las restricciones del maldito cierre perimetral en San Vicente del Raspeig (Alicante). Al no poder salir del pueblo, los miembros originales de otras bandas —Trintxe, Tinito y Jorge "el negro"— decidieron reventar el silencio juntándose en el local de ensayo de "el Negro". En diciembre del mismo año sumamos la voz principal de Maikel, consolidando una puta familia con ganas de escupir temas propios basados en vivencias crudas, hechos pasados y realidades de mierda de este mundo.
+          <strong>[HISTORIA DE RESISTENCIA]</strong> Nacimos en plena pandemia (2020), encerrados por las restricciones del maldito cierre perimetral en San Vicente del Raspeig (Alicante)[cite: 12, 13]. Al no poder salir del pueblo, los miembros originales de otras bandas —Trintxe, Tinito y Jorge "el negro"— decidieron reventar el silencio juntándose en el local de ensayo de "el Negro"[cite: 12, 13]. En diciembre del mismo año sumamos la voz principal de Maikel, consolidando una puta familia con ganas de escupir temas propios basados en vivencias crudas, hechos pasados y realidades de mierda de este mundo[cite: 12, 13].
         </p>
         <p class="terminal-text">
-          <strong>[MUTACIÓN Y PERSISTENCIA]</strong> El fango del directo desgasta: a principios de 2022 Trintxe tuvo que dejar las cuerdas, abriendo paso a la llegada de Alfon para meter metralla a la guitarra y coros. A finales de ese año, Tinito soltó las baquetas y Dani se unió al instante al frente rítmico. Tocó reinventar ritmos, ideas y estructuras desde cero, pero a base de constancia, dedicación y compañerismo cayeron los conciertos y parimos vuestro primer disco. Velocidad Absurda ha venido para quedarse.
+          <strong>[MUTACIÓN Y PERSISTENCIA]</strong> El fango del directo desgasta: a principios de 2022 Trintxe tuvo que dejar las cuerdas, abriendo paso a la llegada de Alfon para meter metralla a la guitarra y coros[cite: 12, 13]. A finales de ese año, Tinito soltó las baquetas y Dani se unió al instante al frente rítmico[cite: 12, 13]. Tocó reinventar ritmos, ideas y estructuras desde cero, pero a base de constancia, dedicación y compañerismo cayeron los conciertos y parimos vuestro primer disco[cite: 12, 13]. Velocidad Absurda ha venido para quedarse[cite: 12, 13].
         </p>
       </div>
     </section>
@@ -86,7 +97,7 @@
     <section id="conciertos" class="concert-box">
       <h3 id="concierto-header-title">[CARGANDO PASARELA DE CONCIERTOS...]</h3>
       <div id="concierto-container" class="concert-content" style="align-items: center; justify-content: center;">
-        <img id="cartel-dinamico" src="cartel1.jpg" alt="Cartel Concierto" class="concert-poster" style="max-width:250px;">
+        <img id="cartel-dinamico" src="cartel1.jpg" alt="Cartel Concierto" class="concert-poster" style="max-width:280px; border:1px solid #00f3ff;" onerror="this.src='/assets/img/foto8.jpg'">
         <div class="concert-details">
           <h4 id="titulo-dinamico">FIESTORRO CIERRE DE TEMPORADA</h4>
           <p id="lineup-dinamico" class="concert-lineup">SPIDIKFLOTES + PUTO DONAL + VELOCIDAD ABSURDA + KONTRAGOLPES</p>
@@ -103,7 +114,6 @@
   </footer>
 
   <script>
-    // 1. RELOJ DE TELEMETRÍA EN TIEMPO REAL
     function updateClock() {
       const now = new Date();
       document.getElementById("live-clock").innerText = now.toLocaleString("es-ES", {
@@ -114,7 +124,6 @@
     setInterval(updateClock, 1000);
     updateClock();
 
-    // 2. PASARELA DE CONCIERTOS DESDE EVENTS.JSON
     fetch("events.json")
       .then(res => res.json())
       .then(data => {
