@@ -25,11 +25,11 @@
     }
     .cyber-box.highlight { border-color: #ff5500; }
     
-    /* TELEMETRÍA SUPERIOR */
+    /* TELEMETRÍA SUPERIOR LIMPIA */
     .telemetry-bar {
       background: #000; border: 1px solid #00ff66; padding: 10px 15px;
       display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.9rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 1rem; flex-wrap: wrap; gap: 10px;
     }
 
     /* CABECERA CON FONDO FOTO9.JPG Y LOGOS */
@@ -56,11 +56,12 @@
       text-align: center;
     }
     
+    /* DISTRIBUCIÓN DE LOGOS EN CABECERA */
     .logo-header-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
       margin-bottom: 1.2rem;
     }
     .logo-colab {
@@ -69,7 +70,7 @@
       filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
     }
     .logo-main-band {
-      height: 90px;
+      height: 110px;
       object-fit: contain;
       filter: drop-shadow(0 0 8px #ff5500);
     }
@@ -78,7 +79,7 @@
     .nav-row {
       display: flex;
       justify-content: space-between;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: nowrap;
       margin-top: 1rem;
     }
@@ -90,7 +91,7 @@
       color: #00ff66;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       background: rgba(0, 0, 0, 0.85);
       box-shadow: 0 0 6px rgba(0, 255, 102, 0.2);
       transition: all 0.2s;
@@ -111,16 +112,22 @@
     .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
     .card { border: 1px solid #333; padding: 1rem; background: #000; text-align: center; }
     .card img { width: 100%; height: 160px; object-fit: cover; border: 1px solid #00ff66; }
+    
+    /* OCULTAR EN MÓVILES MUY PEQUEÑOS PARA NO ROMPER LA FILA DE BOTONES */
+    @media (max-width: 600px) {
+      .nav-row { flex-wrap: wrap; }
+      .btn-cyber-nav { flex: 1 1 30%; font-size: 0.75rem; }
+    }
   </style>
 </head>
 <body class="cyber-terminal">
 
   <main class="terminal-container">
 
-    <!-- RELOJ Y TELEMETRÍA -->
+    <!-- RELOJ Y TELEMETRÍA (SOLO HORA Y BANDA ACTIVA) -->
     <div class="telemetry-bar">
       <div><span style="color: #00f3ff; font-weight: bold; font-size: 1rem;">Velocidad Absurda</span></div>
-      <div style="color: #e7fe00; font-weight: bold; font-size: 1rem;" id="live-clock">18:00:00</div>
+      <div style="color: #e7fe00; font-weight: bold; font-size: 1rem;" id="live-clock">--:--:--</div>
       <div><span style="color: #ff3333; font-weight: bold;">🔴 Banda Activa</span></div>
     </div>
 
@@ -128,12 +135,14 @@
     <header class="hero-header">
       <div class="hero-bg"></div>
       <div class="hero-content">
+        <!-- TRES LOGOS ALINEADOS -->
         <div class="logo-header-container">
-          <img src="working_class_records_logo.jpg" alt="Working Class Records" class="logo-colab" onerror="this.src='working_class_records_logo.png'">
-          <img src="favicon.png" alt="Velocidad Absurda" class="logo-main-band" onerror="this.src='favicon.ico'">
-          <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" class="logo-colab" onerror="this.src='kamilosetas_muskaria_logo.jpg'">
+          <img src="working_class_records_logo.jpg" alt="Working Class Records" class="logo-colab" onerror="this.src='/assets/img/working_class_records_logo.jpg'">
+          <img src="favicon.png" alt="Velocidad Absurda" class="logo-main-band" onerror="this.src='/assets/img/favicon/favicon.png'">
+          <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" class="logo-colab" onerror="this.src='/assets/img/kamilosetas_muskaria_logo.png'">
         </div>
         
+        <!-- BOTONES EN UNA FILA SIMÉTRICA -->
         <div class="nav-row">
           <a href="#conciertos" class="btn-cyber-nav">01/CONCIERTOS</a>
           <a href="#historia" class="btn-cyber-nav">02/HISTORIA</a>
@@ -149,7 +158,7 @@
     <section id="conciertos" class="cyber-box highlight">
       <h2 style="color: #ff5500;">[01 / CONCIERTOS]</h2>
       <div id="concierto-container" style="text-align: center;">
-        <img id="cartel-dinamico" src="/assets/img/27.2.24 080.jpg" alt="Cartel Concierto" style="max-width: 100%; height: auto; max-height: 380px; border: 1px solid #ff5500; margin-bottom: 1rem;" onerror="this.src='cartel1.jpg'">
+        <img id="cartel-dinamico" src="cartel1.jpg" alt="Cartel Concierto" style="max-width: 100%; height: auto; max-height: 380px; border: 1px solid #ff5500; margin-bottom: 1rem;" onerror="this.src='/assets/img/27.2.24 080.jpg'">
         <h3 id="titulo-dinamico" style="color: #ff5500; font-size: 1.4rem; margin: 0.5rem 0;">FIESTORRO CIERRE DE TEMPORADA</h3>
         <p id="lineup-dinamico" style="color: #00ff66; font-size: 0.95rem; font-weight: bold;">SPIDIKFLOTES + PUTO DONAL + VELOCIDAD ABSURDA + KONTRAGOLPES</p>
         <p id="fecha-dinamica" style="color:#d0d0d0;">📅 Sábado, 27 de Junio de 2026</p>
@@ -196,14 +205,14 @@
       <h2>04 / MÚSICA Y LANZAMIENTOS</h2>
       <div class="grid-2">
         <div class="card">
-          <img src="/assets/img/foto8.jpg" alt="Álbum Tranquilo Hermano" onerror="this.src='foto8.jpg'">
+          <img src="foto8.jpg" alt="Álbum Tranquilo Hermano" onerror="this.src='/assets/img/foto8.jpg'">
           <h3 style="color: #ff5500; margin-top: 0.5rem; font-size: 1rem;">ÁLBUM: TRANQUILO HERMANO... (2023)</h3>
           <p style="font-size: 0.8rem; color:#aaa;">35 minutos de metralla pura. 100% Autogestionado.</p>
           <a href="https://open.spotify.com/intl-es/artist/1tQApq8Z7Maz9Gls5VSqtD" target="_blank" class="btn-cyber">ESCUCHAR EN SPOTIFY</a>
         </div>
 
         <div class="card">
-          <img src="/assets/img/foto8.jpg" alt="Vinilo Split 12" onerror="this.src='foto8.jpg'">
+          <img src="foto8.jpg" alt="Vinilo Split 12" onerror="this.src='/assets/img/foto8.jpg'">
           <h3 style="color: #ff5500; margin-top: 0.5rem; font-size: 1rem;">VINILO SPLIT 12" (2025)</h3>
           <p style="font-size: 0.8rem; color:#aaa;">VELOCIDAD ABSURDA / LOS LIPOSOMAS</p>
           <p style="color: #ff5500; font-weight: bold;">15,00 €</p>
@@ -217,19 +226,19 @@
       <h2>05 / LA BANDA</h2>
       <div class="grid-4">
         <div class="card">
-          <img src="/assets/img/fotomaikel1.jpg" alt="Maikel" onerror="this.src='fotomaikel1.jpg'">
+          <img src="fotomaikel1.jpg" alt="Maikel" onerror="this.src='/assets/img/fotomaikel1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">MAIKEL<br><small style="color:#aaa;">Voz Principal</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotonegro1.jpg" alt="Jorge El Negro" onerror="this.src='fotonegro1.jpg'">
+          <img src="fotonegro1.jpg" alt="Jorge El Negro" onerror="this.src='/assets/img/fotonegro1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">JORGE "NEGRO"<br><small style="color:#aaa;">Bajo & Voces</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotoalfon1.jpg" alt="Alfon" onerror="this.src='fotoalfon1.jpg'">
+          <img src="fotoalfon1.jpg" alt="Alfon" onerror="this.src='/assets/img/fotoalfon1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">ALFON<br><small style="color:#aaa;">Guitarra & Coros</small></div>
         </div>
         <div class="card">
-          <img src="/assets/img/fotodani1.jpg" alt="Dani" onerror="this.src='fotodani1.jpg'">
+          <img src="fotodani1.jpg" alt="Dani" onerror="this.src='/assets/img/fotodani1.jpg'">
           <div style="color: #00ff66; margin-top: 0.5rem;">DANI<br><small style="color:#aaa;">Batería</small></div>
         </div>
       </div>
@@ -249,9 +258,9 @@
   <!-- PIE DE PÁGINA CON LOGOS DE COLABORACIÓN Y BANDA -->
   <footer style="text-align: center; padding: 2rem 1rem; color: #666; font-size: 0.8rem; border-top: 1px solid #333; margin-top: 2rem;">
     <div style="display: flex; justify-content: center; align-items: center; gap: 25px; margin-bottom: 1rem;">
-      <img src="working_class_records_logo.jpg" alt="Working Class Records" style="height: 35px; object-fit: contain;" onerror="this.src='working_class_records_logo.png'">
-      <img src="favicon.png" alt="Velocidad Absurda" style="height: 55px; object-fit: contain;" onerror="this.src='favicon.ico'">
-      <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" style="height: 35px; object-fit: contain;" onerror="this.src='kamilosetas_muskaria_logo.jpg'">
+      <img src="working_class_records_logo.jpg" alt="Working Class Records" style="height: 35px; object-fit: contain;" onerror="this.src='/assets/img/working_class_records_logo.jpg'">
+      <img src="favicon.png" alt="Velocidad Absurda" style="height: 55px; object-fit: contain;" onerror="this.src='/assets/img/favicon/favicon.png'">
+      <img src="kamilosetas_muskaria_logo.png" alt="Kamilosetas Muskaria" style="height: 35px; object-fit: contain;" onerror="this.src='/assets/img/kamilosetas_muskaria_logo.png'">
     </div>
     <p>© 2026 VELOCIDAD ABSURDA · SAN VICENTE DEL RASPEIG (ALICANTE)</p>
   </footer>
