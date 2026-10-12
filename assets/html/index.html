@@ -44,6 +44,35 @@
     }
     .telemetry-time { color: #e7fe00; font-weight: bold; }
     .telemetry-status { color: #00ff66; }
+
+    /* ESTILOS PARA EL MÓDULO DE VÍDEO GIGANTE */
+    .video-showcase-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 30px auto;
+      box-sizing: border-box;
+    }
+    .video-box {
+      border: 2px solid #00f3ff !important;
+      background: #000 !important;
+      box-shadow: 0 0 20px rgba(0, 243, 255, 0.25);
+      padding: 15px !important;
+      text-align: center;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      border: 1px solid #333;
+      background: #000;
+      overflow: hidden;
+    }
+    .featured-video {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      display: block;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body class="punk-industrial-theme">
@@ -77,6 +106,22 @@
     <section class="hero-section">
       <h1 class="glitch-title">VELOCIDAD ABSURDA</h1>
       <h2 class="subtitle-neon">PUNK-ROCK DE LA TERRETA (ALICANTE). RUIDO REAL.</h2>
+
+      <!-- MÓDULO DE VÍDEO PRINCIPAL DESTACADO EN TAMAÑO MÁXIMO -->
+      <div class="video-showcase-container">
+        <div class="terminal-box video-box">
+          <h3 style="color: #00f3ff; margin-bottom: 15px;">
+            [TRANSMISIÓN DE VÍDEO PRINCIPAL · GIRA 26-27]
+          </h3>
+          <div class="video-wrapper">
+            <video controls autoplay muted loop playsinline class="featured-video">
+              <source src="preocupa gira 26-27.MP4" type="video/mp4">
+              <source src="preocupa gira 26-27.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de este vídeo.
+            </video>
+          </div>
+        </div>
+      </div>
 
       <!-- PASARELA EN TIEMPO REAL: ÚLTIMA PUBLICACIÓN DE INSTAGRAM / META -->
       <div class="terminal-box" style="border-color: #00f3ff; text-align: center; margin-bottom: 30px;">
