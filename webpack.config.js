@@ -1,12 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
-  entry: './src/index.js', // Ajusta el punto de entrada principal si tu estructura difiere (ej. ./src/js/index.js)
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[contenthash].js',
@@ -32,10 +33,17 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|jfif)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[hash][ext]',
+        },
+      },
+      {
+        test: /\.(mp4|webm|ogg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'media/[name].[hash][ext]',
         },
       },
       {
@@ -49,11 +57,16 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+      inject: 'body',
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
   ],
   resolve: {
-    extensions: ['.js', '.json', '.scss'],
+    extensions: ['.js', '.json', '.scss', '.css'],
   },
 };
